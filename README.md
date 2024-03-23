@@ -1,1 +1,1 @@
-# There are my all basic project that I designed
+# There are all my basic projects that I designed
