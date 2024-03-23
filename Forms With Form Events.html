@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #head{
+            text-align: center;
+            width: 30%;
+            margin-left: 30%;
+            background-color: aqua;
+        }
+    </style>
+</head>
+<body>
+    <form action="" onsubmit="submitfunction()">
+    <fieldset id="head">
+        <legend>My Data</legend>
+    <label for="">Name: </label>
+    <input required oninvalid="alert('Enter Name')" onfocus="focusfunction(this)" onblur="blurfunction(this)" oninput="inputfunction(this)" type="text" name="" id="fname"><br><br>
+    <label for="">Father: </label>
+    <input onfocus="focusfunction(this)" onblur="blurfunction(this)" oninput="inputfunction(this)" type="text" name="" id=""><br><br>
+    <label for="">Email: </label>
+    <input onfocus="focusfunction(this)" onblur="blurfunction(this)" oninput="inputfunction(this)" type="email" name="" id=""><br><br>
+    <label for="">Password:</label>
+    <input onfocus="focusfunction(this)" onblur="blurfunction(this)" oninput="inputfunction(this)" type="password" name="" id=""><br><br>
+    <label for="">DOB</label>
+    <input onfocus="focusfunction(this)" onblur="blurfunction(this)" oninput="inputfunction(this)" type="date" name="" id=""><br><br>
+    <label for="">Ph. No: </label>
+    <input onfocus="focusfunction(this)" onblur="blurfunction(this)" oninput="inputfunction(this)" type="number" placeholder="+92 3*********"><br><br>
+    <label for="">Country: </label>
+    <select onfocus="focusfunction(this)" onblur="blurfunction(this)" oninput="inputfunction(this)">
+        <option aria-placeholder=""></option>
+        <option>Pakistan</option>
+        <option>India</option>
+        <option>Afganistan</option>
+        <option>Bangladash</option>
+    </select><br><br>
+    <label for="">Chose File</label>
+    <input type="file" name="" id=""><br><br>
+    <label for="">Gender: </label>
+    <label for="">Male</label>
+    <input type="radio" name="l" id="">
+    <label for="">Female</label>
+    <input type="radio" name="l" id=""><br><br>
+    <label for="">Subjects: </label>
+    <label for="">Eng</label>
+    <input type="checkbox">
+    <label for="">Urdu</label>
+    <input type="checkbox">
+    <label for="">Math</label>
+    <input type="checkbox"><br><br>
+    <label for="">Message: </label>
+    <textarea onfocus="focusfunction(this)" onblur="blurfunction(this)" oninput="inputfunction(this)" name="" id="" cols="30" rows="10"></textarea><br><br>
+    <button type="submit"><b>Submit</b></button>
+    <button type="reset"><b>Reset</b></button>
+</fieldset>
+</form>
+<div id="hamza"></div>
+<script>
+    function focusfunction(a){
+        a.style.border="3px solid black"
+    }
+    function blurfunction(a){
+        a.style.border=""
+    }
+    function inputfunction(a){
+        var x=a.value;
+        document.getElementById("hamza").innerHTML=x;
+    }
+    function submitfunction(a){
+        var x=document.getElementById("fname").value
+        document.write("Thanks " + x)
+    }
+</script>
+</body>
+</html>
